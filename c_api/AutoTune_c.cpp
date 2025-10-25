@@ -24,7 +24,7 @@ void faiss_ParameterRange_values(
         FaissParameterRange* range,
         double** p_values,
         size_t* p_size) {
-    auto& values = reinterpret_cast<ParameterRange*>(range)->values;
+    auto& values = reinterpret_cas<ParameterRange*>(range)->value;
     *p_values = values.data();
     *p_size = values.size();
 }
